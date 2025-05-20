@@ -1,0 +1,337 @@
+/* Fondo animado */
+.animated-bg {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #43cea2, #3b6997, #198754, #d1d1cd);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.animated-title {
+    animation: bounceIn 1.2s;
+    color: #0cd366; /* Cambia este color por el que prefieras */
+    font-weight: bold;
+    text-shadow: 1px 2px 8px rgba(20, 20, 20, 0.1);
+}
+@keyframes bounceIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Tarjetas con efecto */
+.card-efecto {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.93);
+}
+.card-efecto:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+}
+
+/* Botón personalizado */
+.btn-custom {
+    background: linear-gradient(90deg, #1e809e 60%, #2dbd8f 100%);
+    color: #fff;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(20, 20, 20, 0.15);
+}
+.btn-custom:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #198754 100%);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    padding: 20px 0;
+    background: #f8f9fa;
+    color: #0e0d0d;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    font-size: 0.95rem;
+    border-radius: 0 0 12px 12px;
+}
+
+.titulo-futbolapp {
+    color: #0cd366; /* Cambia este color por el que prefieras */
+    text-shadow: 1px 2px 10px rgba(22, 22, 22, 0.18);
+    font-weight: bold;
+}
+
+
+.trofeo-titulo {
+    color: #0cd366; /* Cambia este color por el que prefieras */
+    filter: drop-shadow(0 2px 6px #10b3a588);
+}
+
+
+
+.bg-gradient-header {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    border-radius: 18px;
+}
+
+.tabla-presidentes tbody tr {
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.tabla-presidentes tbody tr:hover {
+    background: #06d1b6;
+    box-shadow: 0 2px 12px rgba(67, 206, 162, 0.12);
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(255, 174, 81, 0.15);
+}
+.btn-edit:hover {
+    background: linear-gradient(90deg, #ffa751 0%, #ada05b 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.btn-delete {
+    background: linear-gradient(90deg, #ff5858 0%, #f857a6 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(248, 87, 166, 0.15);
+}
+.btn-delete:hover {
+    background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.tabla-equipos tbody tr {
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.tabla-equipos tbody tr:hover {
+    background: #e6f7ff;
+    box-shadow: 0 2px 12px rgba(67, 206, 162, 0.12);
+    cursor: pointer;
+}
+.btn-edit {
+    background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(255, 174, 81, 0.15);
+}
+.btn-edit:hover {
+    background: linear-gradient(90deg, #ffa751 0%, #ffe259 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+.btn-delete {
+    background: linear-gradient(90deg, #ff5858 0%, #f857a6 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(248, 87, 166, 0.15);
+}
+.btn-delete:hover {
+    background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+.btn-custom {
+    background: linear-gradient(90deg, #1e809e 60%, #2dbd8f 100%);
+    color: #fff;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #198754 100%);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+.bg-gradient-header {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+}
+.btn-custom {
+    background: linear-gradient(90deg, #1e809e 60%, #2dbd8f 100%);
+    color: #fff;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #198754 100%);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+.bg-gradient-header {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+}
+.btn-custom {
+    background: linear-gradient(90deg, #1e809e 60%, #2dbd8f 100%);
+    color: #fff;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #198754 100%);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+
+
+.bg-gradient-header {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    border-radius: 18px;
+}
+.tabla-jugadores tbody tr {
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.tabla-jugadores tbody tr:hover {
+    background: #e6fff5;
+    box-shadow: 0 2px 12px rgba(67, 206, 162, 0.12);
+    cursor: pointer;
+}
+.btn-edit {
+    background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(255, 174, 81, 0.15);
+}
+.btn-edit:hover {
+    background: linear-gradient(90deg, #ffa751 0%, #ffe259 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+.btn-delete {
+    background: linear-gradient(90deg, #ff5858 0%, #f857a6 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(248, 87, 166, 0.15);
+}
+.btn-delete:hover {
+    background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+.btn-custom {
+    background: linear-gradient(90deg, #1e809e 60%, #2dbd8f 100%);
+    color: #fff;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #198754 100%);
+    color: #fff;
+    transform: scale(1.07);
+}
+.bg-gradient-header {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+}
+.btn-custom {
+    background: linear-gradient(90deg, #1e809e 60%, #2dbd8f 100%);
+    color: #fff;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #198754 100%);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+
+.bg-gradient-header {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    border-radius: 18px;
+}
+.tabla-juegos tbody tr {
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.tabla-juegos tbody tr:hover {
+    background: #e6fff5;
+    box-shadow: 0 2px 12px rgba(67, 206, 162, 0.12);
+    cursor: pointer;
+}
+.btn-edit {
+    background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(255, 174, 81, 0.15);
+}
+.btn-edit:hover {
+    background: linear-gradient(90deg, #ffa751 0%, #ffe259 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+.btn-delete {
+    background: linear-gradient(90deg, #ff5858 0%, #f857a6 100%);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding: 0.45rem 1rem;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(248, 87, 166, 0.15);
+}
+.btn-delete:hover {
+    background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+    color: #fff;
+    transform: scale(1.08);
+}
+.btn-custom {
+    background: linear-gradient(90deg, #1e809e 60%, #2dbd8f 100%);
+    color: #fff;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #198754 100%);
+    color: #fff;
+    transform: scale(1.07);
+}

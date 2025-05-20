@@ -41,8 +41,6 @@ Route::get('player/{player}/edit', [PlayerController::class, 'edit'])->name('pla
 Route::put('player/{player}', [PlayerController::class, 'update'])->name('players.update');
 Route::delete('player/{player}', [PlayerController::class, 'destroy'])->name('players.destroy');
 
-
-
 Route::get('goals', [GoalController::class, 'index'])->name('goals.index');
 Route::get('goal/create', [GoalController::class, 'create'])->name('goals.create');
 Route::post('goal/store', [GoalController::class, 'store'])->name('goals.store');

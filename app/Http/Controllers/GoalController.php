@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Goal;
 use App\Models\Player;
 use App\Models\Game;
-use Illuminate\Http\Request;
 
 class GoalController extends Controller
 {
     public function index()
     {
-        $goals = Goal::with('player', 'game')->get();
+        $goals = Goal::with(['player', 'game'])->get();
         return view('goals.index', compact('goals'));
     }
 
@@ -31,29 +31,30 @@ class GoalController extends Controller
             'game_id' => 'required|exists:games,id',
         ]);
 
-        Goal::create($request->all());
+        $goal = new Goal();
+        $goal->name = $request->name;
+        $goal->description = $request->description;
+        $goal->player_id = $request->player_id;
+        $goal->game_id = $request->game_id;
+        $goal->save();
 
-        return redirect()->route('goals.index')->with('success', 'Gol creado correctamente.');
+        return redirect()->route('goals.index')->with('success', 'Gol creado correctamente');
     }
 
-    public function show($id)
+    public function show(Goal $goal)
     {
-        $goal = Goal::with('player', 'game')->findOrFail($id);
         return view('goals.show', compact('goal'));
     }
 
-    public function edit($id)
+    public function edit(Goal $goal)
     {
-        $goal = Goal::findOrFail($id);
         $players = Player::all();
         $games = Game::all();
         return view('goals.edit', compact('goal', 'players', 'games'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Goal $goal)
     {
-        $goal = Goal::findOrFail($id);
-
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
@@ -61,16 +62,18 @@ class GoalController extends Controller
             'game_id' => 'required|exists:games,id',
         ]);
 
-        $goal->update($request->all());
+        $goal->name = $request->name;
+        $goal->description = $request->description;
+        $goal->player_id = $request->player_id;
+        $goal->game_id = $request->game_id;
+        $goal->save();
 
-        return redirect()->route('goals.index')->with('success', 'Gol actualizado correctamente.');
+        return redirect()->route('goals.index')->with('success', 'Gol actualizado correctamente');
     }
 
-    public function destroy($id)
+    public function destroy(Goal $goal)
     {
-        $goal = Goal::findOrFail($id);
         $goal->delete();
-
-        return redirect()->route('goals.index')->with('success', 'Gol eliminado correctamente.');
+        return redirect()->route('goals.index')->with('success', 'Gol eliminado correctamente');
     }
 }
